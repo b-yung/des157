@@ -22,10 +22,10 @@ a:visited {
 	text-decoration: underline;
 }
 a:hover {
-	color: white;
+	color: #7ae7c7;
 }
 a:active{
-	color: white;
+	color: #7ae7c7;
 	text-decoration: underline;
 }
 
