@@ -8,7 +8,7 @@ body {
     font-size: 13px;
     font-family: Arial, helvetica, sans-serif;
 		color: white;
-    width: 800px;
+    width: 600px;
     margin: auto;
 		line-height: 1.4em;
 }
@@ -31,20 +31,21 @@ a:active{
 
 #mySketch {
 	margin-bottom: 50px;
+  margin-right: 100px;
 }
 
-#mySketch img {
+/* #mySketch img {
     height: 250px;
     width: 800px;
     float: left;
     display: block;
 		margin-bottom: 50px;
-}
+    margin-right: 400px;
+} */
 
 #BlogHeader h1 {
     margin-top: 50px;
 }
-
 
 #main {
     width: 100%;
