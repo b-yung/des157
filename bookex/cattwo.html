@@ -1,0 +1,81 @@
+<!--NOTE: Replace all of the uppercase text from glenda with your own custom content-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CH 13: The Cat's Hat</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      body {
+          font-family: Helvetica, sans-serif;
+          color: white;
+          background-color: #333;
+          font-size: 12px;
+          position: absolute;
+          left: 50%;
+          text-align: center;
+          top: 50%;
+      }
+
+      h1 {
+        font-size: 30px;
+        margin-bottom: 24px;
+      }
+
+      h2 {
+        font-weight: 400;
+      }
+
+      div {
+          margin: 0 auto;
+          position: relative;
+          width: 200px;
+      }
+
+      #cat {
+        position: absolute;
+      }
+
+      #hat {
+        margin: 100px;
+      }
+
+      </style>
+    </head>
+
+    <body>
+        <h1>Chapter 13: Cat's Hat</h1>
+
+        <p style="text-align: center">
+            <img src="kitten.png" style="position: absolute" alt="cat" id="cat" >
+            <img src="hat.png"  style="position: absolute" alt="hat" id="hat">
+        </p>
+        <script>
+            var cat = document.querySelector("#cat");
+            var hat = document.querySelector("#hat");
+            var angle = 0,
+                lastTime = null;
+
+            function animate(time) {
+                if (lastTime != null)
+                    angle += (time - lastTime) * 0.001;
+                lastTime = time;
+                cat.style.top = (Math.sin(angle) * 200) + "px";
+                cat.style.left = (Math.cos(angle) * 200) + "px";
+
+                hat.style.left = (Math.sin(angle) * 200) + "px";
+                hat.style.top = (Math.cos(angle) * 200) + "px";
+
+                requestAnimationFrame(animate);
+            }
+
+
+            requestAnimationFrame(animate);
+        </script>
+
+    </body>
