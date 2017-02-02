@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+/* CSS Document */
+/* start all css with a reset */
+
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+nav {
+	position:absolute;
+	top:145px;
+	left:40px;
+	}
+
+nav li{
+	list-style-type:none;
+	width:120px;
+	height:10px;
+	background-color:orange;
+	font-size: 14px;
+	padding: 0.3em 0.75em 1.0em 0.75em;
+	margin-bottom: 3px;
+	}
+a:link{
+	text-decoration:none;
+	font-family:verdana;
+	color: black}
+	}
+a:hover{
+	text-decoration:none;
+	font-family: verdana;
+	color: white;
+	}
+
+#button_one{
+	position:absolute;
+	top: 250px;
+	left:200px;
+	}
+#button_one a:link {
+	display:block;
+	width:100px;
+	height:100px;
+	background-image:url(orange_circle.png);
+	}
+#button_one a:hover {
+	background-image: url(hotspot.png);
+	}
+
+#button_two{
+	position:absolute;
+	top: 80px;
+	left: 420px;
+	}
+#button_two p{
+	position:absolute;
+	top:15px;
+	left:0px;
+	width:100px;
+	display:none;
+	}
+#button_two:hover p{
+	display:block;
+	font-family: verdana;
+	font-size: 14px;
+	color:white;
+	font-weight:bold;
+	line-height:90%;
+	text-align: center;
+	}
+
+main{
+	position:relative;
+	width:2400px;
+	height:1350px;
+	top:150px;
+	margin:auto;
+	}
+body{
+	background-color: black;
+	position: relative;
+	margin:auto;
+	}
+.onpage {
+	font-family: Helvetica, sans-serif;
+	color:red;
+	font-weight:bold;
+	}
