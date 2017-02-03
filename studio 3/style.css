@@ -1,38 +1,74 @@
 @charset "UTF-8";
 
 /* CSS Document */
+
+
 /* start all css with a reset */
 
 * {
-    margin: 0px;
-    padding: 0px
+  margin: 0px;
+  padding: 0px
+}
+
+main {
+  position: relative;
+  width: 1000px;
+  height: 563px;
+  top: 150px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+body {
+  background-color: black;
+  position: absolute;
+  margin: auto;
+  font-family: Helvetica, sans-serif;
+}
+
+
+/*
+.onpage {
+  font-family: Helvetica, sans-serif;
+  color: red;
+  font-weight: bold;
 }
 
 nav {
-	position:absolute;
-	top:145px;
-	left:40px;
-	}
+  position: absolute;
+  top: 145px;
+  left: 40px;
+}
 
-nav li{
-	list-style-type:none;
-	width:120px;
-	height:10px;
-	background-color:orange;
-	font-size: 14px;
-	padding: 0.3em 0.75em 1.0em 0.75em;
-	margin-bottom: 3px;
-	}
-a:link{
-	text-decoration:none;
-	font-family:verdana;
-	color: black}
-	}
-a:hover{
-	text-decoration:none;
-	font-family: verdana;
-	color: white;
-	}
+nav li {
+  list-style-type: none;
+  width: 120px;
+  height: 10px;
+  background-color: orange;
+  font-size: 14px;
+  padding: 0.3em 0.75em 1.0em 0.75em;
+  margin-bottom: 3px;
+}
+
+a:link {
+  text-decoration: none;
+  font-family: verdana;
+  color: black
+}
+
+
+}
+a:hover {
+  text-decoration: none;
+  font-family: verdana;
+  color: white;
+}
+
 
 #button_one{
 	position:absolute;
@@ -71,20 +107,4 @@ a:hover{
 	text-align: center;
 	}
 
-main{
-	position:relative;
-	width:2400px;
-	height:1350px;
-	top:150px;
-	margin:auto;
-	}
-body{
-	background-color: black;
-	position: relative;
-	margin:auto;
-	}
-.onpage {
-	font-family: Helvetica, sans-serif;
-	color:red;
-	font-weight:bold;
-	}
+  */
