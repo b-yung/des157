@@ -20,10 +20,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // add an eventListener for mouseover that changes the src of the
     // tag image to the image titled "tag.png"
-    /*tag.addEventListener('mouseover', function() {
+    tag.addEventListener('mouseover', function() {
         console.log('mouseover, change color');
         tag.src = "img/bw/tag.png"
-    });*/
+    });
+
+    tag.addEventListener('mouseout', function() {
+        console.log('mouseout, tag b&w');
+        tag.src = "img/bw/tag-bw.png";
+    });
 
 
     vandal.addEventListener('mouseover', function() {
