@@ -3,8 +3,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
 
-    // add event listeners
-    //var original = document.getElementById('original');
     var tag = document.getElementById('tag');
     var vandal = document.getElementById('vandal');
     var punch = document.getElementById('punch');
@@ -29,8 +27,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var imgs = [tag, vandal, punch, bad, marvels, gb];
     */
 
-    // add an eventListener for mouseover that changes the src of the
-    // tag image to the image titled "tag.png"
 
 // -----------------------------------------------------
     // change tag color
@@ -47,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     tag.addEventListener('click', function() {
         console.log('tag clicked');
         tagAnswer.style.display="block";
-        document.getElementById("tagAnswer").className = "answer";
-    });
+        /*document.getElementById("tagAnswer").className = "answer"; */
+    })
 
 // -----------------------------------------------------
     // change vandal color
@@ -66,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         console.log('vandal clicked');
         vandalAnswer.style.display = 'block';
         document.getElementById("vandalAnswer").className = "answer";
-    });
+    })
 
 // -----------------------------------------------------
     // change punch color
@@ -78,6 +74,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     punch.addEventListener('mouseout', function() {
         console.log('mouseout, punch b&w');
         punch.src = "img/bw/punch-bw.png";
+    });
+
+    punch.addEventListener('click', function() {
+        console.log('punch clicked');
+        punchAnswer.style.display = 'block';
+        document.getElementById("punchAnswer").className = "answer";
     });
 
 // -----------------------------------------------------
@@ -92,6 +94,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
         bad.src = "img/bw/bad-bw.png";
     });
 
+    bad.addEventListener('click', function() {
+        console.log('punch clicked');
+        badAnswer.style.display = 'block';
+        document.getElementById("badAnswer").className = "answer";
+    });
+
 // -----------------------------------------------------
     // change marvels color
     marvels.addEventListener('mouseover', function() {
@@ -102,6 +110,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     marvels.addEventListener('mouseout', function() {
         console.log('mouseout, marvels b&w');
         marvels.src = "img/bw/marvel-bw.png";
+    });
+
+    marvels.addEventListener('click', function() {
+        console.log('punch clicked');
+        marvelAnswer.style.display = 'block';
+        document.getElementById("marvelAnswer").className = "answer";
     });
 
 // -----------------------------------------------------
@@ -116,6 +130,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         gb.src = "img/bw/gb-bw.png";
     });
 
+    gb.addEventListener('click', function() {
+        console.log('punch clicked');
+        gbAnswer.style.display = 'block';
+        document.getElementById("gbAnswer").className = "answer";
+    });
 });
 // ----------------------------------------------
   for (var i = 0; i < close.length; i++) {
