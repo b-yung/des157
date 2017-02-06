@@ -72,6 +72,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
         marvels.src = "img/bw/marvel-bw.png";
     });
 
+    // ***************************************************************
+    // change gb color
+    gb.addEventListener('mouseover', function() {
+        console.log('mouseover, change color');
+        gb.src = "img/bw/gb.png"
+    });
+
+    gb.addEventListener('mouseout', function() {
+        console.log('mouseout, gb b&w');
+        gb.src = "img/bw/gb-bw.png";
+    });
+
 });
 /*
     tag.addEventListener('mouseout', function() {
