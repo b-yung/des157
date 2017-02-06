@@ -78,3 +78,28 @@ h1 {
   border-radius: 200px;
   background-color: rgba(255, 255, 255, 0.7);
 }
+
+.answer p {
+  width: 80%;
+  height: 80%;
+  border-radius: 200px;
+  text-align: center;
+  left: 35px;
+  position: relative;
+  top: 40%;
+  color: black;
+  font-size: 0.8em;
+}
+
+.close {
+  font-size: 3em;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}

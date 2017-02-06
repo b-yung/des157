@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // add event listeners
     //var original = document.getElementById('original');
     var tag = document.getElementById('tag');
-    console.log(tag);
     var vandal = document.getElementById('vandal');
     var punch = document.getElementById('punch');
     var bad = document.getElementById('bad');
@@ -45,11 +44,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     tag.addEventListener('click', function() {
         console.log('tag clicked');
-        tagAnswer.style.display = 'block';
+        tagAnswer.style.display = "block";
         document.getElementById("tagAnswer").className = "answer";
     });
 
-    // -----------------------------------------------------
+// -----------------------------------------------------
     // change vandal color
     vandal.addEventListener('mouseover', function() {
         console.log('mouseover, change color');
@@ -61,8 +60,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
         vandal.src = "img/bw/vandal-bw.png";
     });
 
+    vandal.addEventListener('click', function() {
+        console.log('vandal clicked');
+        vandalAnswer.style.display = 'block';
+        document.getElementById("vandalAnswer").className = "answer";
+    });
 
-    // -----------------------------------------------------
+// -----------------------------------------------------
     // change punch color
     punch.addEventListener('mouseover', function() {
         console.log('mouseover, change color');
@@ -74,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         punch.src = "img/bw/punch-bw.png";
     });
 
-    // -----------------------------------------------------
+// -----------------------------------------------------
     // change bad color
     bad.addEventListener('mouseover', function() {
         console.log('mouseover, change color');
@@ -86,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         bad.src = "img/bw/bad-bw.png";
     });
 
-    // -----------------------------------------------------
+// -----------------------------------------------------
     // change marvels color
     marvels.addEventListener('mouseover', function() {
         console.log('mouseover, change color');
@@ -98,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         marvels.src = "img/bw/marvel-bw.png";
     });
 
-    // -----------------------------------------------------
+// -----------------------------------------------------
     // change gb color
     gb.addEventListener('mouseover', function() {
         console.log('mouseover, change color');
@@ -112,8 +116,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 // ----------------------------------------------
-  /*  for (var i = 0; i < close.length; i++) {
+  for (var i = 0; i < close.length; i++) {
        close[i].addEventListener("click", function () {
          this.parentElement.style.display = "none";
        });
-}); */
+
+}
