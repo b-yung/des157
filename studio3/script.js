@@ -24,8 +24,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var answer = document.getElementsByClassName("answer");
     var close = document.getElementsByClassName("close");
 
+    /*
     var answers = [tagAnswer, vandalAnswer, punchAnswer, badAnswer, marvelAnswer, gbAnswer];
     var imgs = [tag, vandal, punch, bad, marvels, gb];
+    */
 
     // add an eventListener for mouseover that changes the src of the
     // tag image to the image titled "tag.png"
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     tag.addEventListener('click', function() {
         console.log('tag clicked');
-        tagAnswer.style.display = "block";
+        tagAnswer.style.display="block";
         document.getElementById("tagAnswer").className = "answer";
     });
 
