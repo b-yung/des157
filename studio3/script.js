@@ -12,14 +12,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
     var tagAnswer = document.getElementById("tagAnswer");
-  /*
     var vandalAnswer = document.getElementById("vandalAnswer");
     var punchAnswer = document.getElementById("punchAnswer");
     var badAnswer = document.getElementById("badAnswer");
     var marvelAnswer = document.getElementById("marvelAnswer");
     var gbAnswer = document.getElementById("gbAnswer");
-    */
-/*
+  /*
     var answer = document.getElementsByClassName("answer");
     var close = document.getElementsByClassName("close");
 */
