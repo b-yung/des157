@@ -64,12 +64,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // change marvels color
     marvels.addEventListener('mouseover', function() {
         console.log('mouseover, change color');
-        marvels.src = "img/bw/bad.png"
+        marvels.src = "img/bw/marvels.png"
     });
 
     marvels.addEventListener('mouseout', function() {
         console.log('mouseout, marvels b&w');
-        marvels.src = "img/bw/marvels-bw.png";
+        marvels.src = "img/bw/marvel-bw.png";
     });
 
 });
