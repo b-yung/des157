@@ -10,13 +10,21 @@
   padding: 0px
 }
 
+body {
+  margin: auto;
+  background-color: black;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
 main {
   position: relative;
-  width: 1000px;
-  height: 563px;
-  top: 150px;
+  width: 1200px;
+  height: 1200px;
+  background-color: teal;
   margin: auto;
-  text-align: center;
+  top: 80px;
+  padding-top: 20px;
 }
 
 h1 {
@@ -24,13 +32,41 @@ h1 {
   margin-bottom: 20px;
 }
 
-body {
-  background-color: black;
+#tag {
   position: absolute;
-  margin: auto;
-  font-family: Helvetica, sans-serif;
+  top: 284px;
+  left: 84px;
 }
 
+#vandal {
+  position: absolute;
+  top: 288px;
+  left: 427px;
+}
+
+#punch {
+  position: absolute;
+  top: 280px;
+  left: 757px;
+}
+
+#bad {
+  position: absolute;
+  top: 725px;
+  left: 110px;
+}
+
+#marvels {
+  position: absolute;
+  top: 730px;
+  left: 432px;
+}
+
+#gb {
+  position: absolute;
+  top: 725px;
+  left: 742px;
+}
 
 /*
 .onpage {
