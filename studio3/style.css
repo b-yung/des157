@@ -69,8 +69,8 @@ h1 {
 }
 
 .answer {
-  width: 600px;
-  height: 400px;
+  width: 400px;
+  height: 200px;
   border: 6px solid white;
   position: absolute;
   top: 50px;
@@ -79,13 +79,16 @@ h1 {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+.answer h2{
+  position: relative;
+}
+
 .answer p {
-  width: 80%;
-  height: 80%;
+  position: relative;
+  width: 200px;
   border-radius: 200px;
   text-align: center;
-  left: 35px;
-  position: relative;
+  left: 40%;
   top: 40%;
   color: black;
   font-size: 0.8em;
@@ -94,4 +97,10 @@ h1 {
 .block {
   display: inline-block;
   margin-bottom: 10%;
+}
+
+.close1, .close2, .close3, .close4, .close5, .close6 {
+  position: relative;
+  margin-left: 95%;
+  top: -380px;
 }

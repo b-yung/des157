@@ -17,17 +17,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var badAnswer = document.getElementById("badAnswer");
     var marvelAnswer = document.getElementById("marvelAnswer");
     var gbAnswer = document.getElementById("gbAnswer");
-  /*
+
+    var close1=document.getElementById("close1");
+    var close2=document.getElementById("close2");
+	  var close3=document.getElementById("close3");
+	  var close4=document.getElementById("close4");
+    var close5=document.getElementById("close5");
+	  var close6=document.getElementById("close6");
+
     var answer = document.getElementsByClassName("answer");
     var close = document.getElementsByClassName("close");
-*/
+
     /*
     var answers = [tagAnswer, vandalAnswer, punchAnswer, badAnswer, marvelAnswer, gbAnswer];
     var imgs = [tag, vandal, punch, bad, marvels, gb];
     */
 
 
-// -----------------------------------------------------
+    // -----------------------------------------------------
     // change tag color
     tag.addEventListener("mouseover", function() {
         console.log("mouseover, change color");
@@ -41,12 +48,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     tag.addEventListener("click", function() {
         console.log("tag clicked");
-        tagAnswer.style.display="block";
-        /*document.getElementById("tagAnswer").className = "answer"; */
+        tagAnswer.style.display = "block";
+        document.getElementById("tagAnswer").className = "answer";
     });
 
+    close1.addEventListener("click", function() {
+        tagAnswer.style.display = "none";
+    })
 
-// -----------------------------------------------------
+    // -----------------------------------------------------
     // change vandal color
     vandal.addEventListener("mouseover", function() {
         console.log("mouseover, change color");
@@ -60,11 +70,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     vandal.addEventListener("click", function() {
         console.log("vandal clicked");
-        vandalAnswer.style.display="block";
-        //document.getElementById("vandalAnswer").className = "answer";
+        vandalAnswer.style.display = "block";
+        document.getElementById("vandalAnswer").className = "answer";
     });
 
-// -----------------------------------------------------
+    close2.addEventListener("click", function() {
+        vandalAnswer.style.display = "none";
+    })
+
+    // -----------------------------------------------------
     // change punch color
     punch.addEventListener("mouseover", function() {
         console.log("mouseover, change color");
@@ -79,10 +93,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     punch.addEventListener("click", function() {
         console.log("punch clicked");
         punchAnswer.style.display = "block";
-        //document.getElementById("punchAnswer").className = "answer";
+        document.getElementById("punchAnswer").className = "answer";
     });
 
-// -----------------------------------------------------
+    close3.addEventListener("click", function() {
+        punchAnswer.style.display = "none";
+    })
+
+    // -----------------------------------------------------
     // change bad color
     bad.addEventListener("mouseover", function() {
         console.log("mouseover, change color");
@@ -97,10 +115,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     bad.addEventListener("click", function() {
         console.log("bad clicked");
         badAnswer.style.display = "block";
-      //  document.getElementById("badAnswer").className = "answer";
+        document.getElementById("badAnswer").className = "answer";
     });
 
-// -----------------------------------------------------
+    close4.addEventListener("click", function() {
+        badAnswer.style.display = "none";
+    })
+    // -----------------------------------------------------
     // change marvels color
     marvels.addEventListener("mouseover", function() {
         console.log("mouseover, change color");
@@ -115,10 +136,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     marvels.addEventListener("click", function() {
         console.log("marvels clicked");
         marvelAnswer.style.display = "block";
-      //  document.getElementById("marvelAnswer").className = "answer";
+        document.getElementById("marvelAnswer").className = "answer";
     });
 
-// -----------------------------------------------------
+    close5.addEventListener("click", function() {
+        marvelAnswer.style.display = "none";
+    })
+
+    // -----------------------------------------------------
     // change gb color
     gb.addEventListener("mouseover", function() {
         console.log("mouseover, change color");
@@ -133,13 +158,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     gb.addEventListener("click", function() {
         console.log("gb clicked");
         gbAnswer.style.display = "block";
-      //  document.getElementById("gbAnswer").className = "answer";
+        document.getElementById("gbAnswer").className = "answer";
     });
+
+    close6.addEventListener("click", function() {
+        gbAnswer.style.display = "none";
+    })
 });
 // ----------------------------------------------
-  for (var i = 0; i < close.length; i++) {
-       close[i].addEventListener("click", function () {
-         this.parentElement.style.display = "none";
-       });
+for (var i = 0; i < close.length; i++) {
+    close[i].addEventListener("click", function() {
+        this.parentElement.style.display = "none";
+    });
 
 }
