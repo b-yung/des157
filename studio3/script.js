@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var vandal = document.getElementById('vandal');
     var punch = document.getElementById('punch');
     var bad = document.getElementById('bad');
-    var marvel = document.getElementById('marvel');
+    var marvels = document.getElementById('marvels');
     var gb = document.getElementById('gb');
 
 
@@ -58,6 +58,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
     bad.addEventListener('mouseout', function() {
         console.log('mouseout, bad b&w');
         bad.src = "img/bw/bad-bw.png";
+    });
+
+    // ***************************************************************
+    // change marvels color
+    marvels.addEventListener('mouseover', function() {
+        console.log('mouseover, change color');
+        marvels.src = "img/bw/bad.png"
+    });
+
+    marvels.addEventListener('mouseout', function() {
+        console.log('mouseout, marvels b&w');
+        marvels.src = "img/bw/marvels-bw.png";
     });
 
 });
