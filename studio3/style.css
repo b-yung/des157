@@ -103,3 +103,8 @@ h1 {
 .show {
   display: block;
 }
+
+.block {
+  display: inline-block;
+  margin-bottom: 10%;
+}
