@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     vandal.addEventListener("click", function() {
         console.log("vandal clicked");
-        vandalAnswer.style.display = "block";
+        vandalAnswer.style.display="block";
         //document.getElementById("vandalAnswer").className = "answer";
     });
 

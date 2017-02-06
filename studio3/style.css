@@ -91,19 +91,6 @@ h1 {
   font-size: 0.8em;
 }
 
-.close {
-  font-size: 3em;
-  position: relative;
-}
-
-.hidden {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
 .block {
   display: inline-block;
   margin-bottom: 10%;
