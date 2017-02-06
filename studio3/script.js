@@ -166,9 +166,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })
 });
 // ----------------------------------------------
-for (var i = 0; i < close.length; i++) {
+/*for (var i = 0; i < close.length; i++) {
     close[i].addEventListener("click", function() {
         this.parentElement.style.display = "none";
-    });
-
-}
+    }); */

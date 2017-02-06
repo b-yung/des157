@@ -81,7 +81,7 @@ h1 {
 
 .answer h2{
   position: relative;
-  top: 30px;
+  top: 40px;
 }
 
 .answer p {
@@ -98,7 +98,7 @@ h1 {
 
 .close {
   font-size: 3em;
-  position: absolute;
+  position: relative;
   margin-left: 85%;
   margin-top: -27%;
 }
