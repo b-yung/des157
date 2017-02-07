@@ -115,15 +115,17 @@ h1 {
   font-size: 0.8em;
 }
 
-.answer video {
-  margin-top: 100px;
-}
 .close {
   font-size: 3em;
   position: relative;
   margin-left: 85%;
   top: -50px;
 }
+
+.answer video {
+  margin-top: 50px;
+}
+
 
 footer {
     position: relative;
