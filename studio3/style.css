@@ -94,10 +94,10 @@ h1 {
 
 .answer p {
   position: relative;
-  width: 400px;
+  width: 500px;
   border-radius: 200px;
   text-align: center;
-  left: 300px;
+  left: 250px;
   top: 60px;
   color: black;
   font-size: 0.8em;
