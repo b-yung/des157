@@ -2,7 +2,7 @@
 <!-- saved from url=(0064)https://glendadrew.github.io/des157-w17/html/bookExTemplate.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>! ADD A DESCRIPTIVE TITLE HERE...DO NOT FORGET TO UPDATE THIS !</title>
+    <title>Exercise 4</title>
     <style>
 
             * {
@@ -13,44 +13,44 @@
             body {
                 font-family: Verdana, Geneva, sans-serif;
                 color: white;
-                background-color: #E8E5E6;
+                background-color: #0D4F8B;
                 font-size: 11px;
                 margin: 24px;
             }
 
             h1 {
-                color: #3B3355;
+                color: #8470ff;
             }
 
             .trail { /* className for the trail elements */
-                background: #BFCDE0;
+                background: #8470ff;
                 position: absolute;
                 height: 20px;
                 width: 20px;
                 border-radius: 20px;
             }
     </style>
-<style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style></head>
+</head>
 
 <body>
     <h1>CH 14; Mouse Trail</h1>
     <h2>open the console to see the results of the script</h2>
 
     <script>
-        var circles = []; // start array for circles
-        for (var i = 0; i < 10; i++) { // creat loop and push into array
-            var elem = document.createElement("div");
-            elem.className = "trail";
-            document.body.appendChild(elem);
-            circles.push(elem); // push to array
+        var dots = []; // start array for dots
+        for (var i = 0; i < 30; i++) { // create loop and push into array
+            var node = document.createElement("div");
+            node.className = "trail";
+            document.body.appendChild(node);
+            dots.push(node); // push to array
         }
-        var currentCircle = 0;
+        var currentDot = 0;
 
         addEventListener("mousemove", function(event) {
-            var circle = circles[currentCircle]; // set current circles
-            circle.style.left = (event.pageX - 5) + "px"; // set location of X
-            circle.style.top = (event.pageY - 5) + "px"; // set location of Y
-            currentCircle = (currentCircle + 1) % circles.length; // set how long the trail is
+            var dot = dots[currentDot]; // set current circles
+            dot.style.left = (event.pageX - 5) + "px"; // set location of X
+            dot.style.top = (event.pageY - 5) + "px"; // set location of Y
+            currentDot = (currentDot + 1) % dots.length; // set how long the trail is
         });
 
     </script>
