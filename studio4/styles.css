@@ -6,24 +6,57 @@
 
 body {
   font: normal 16px/1.5 "Helvetica Neue", sans-serif;
-  background: #456990;
+  background: #247BA0;
   color: #fff;
   overflow-x: hidden;
   padding-bottom: 50px;
 }
 
+time {
+  font-weight: bold;
+  padding: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  color: #F3FFBD;
+}
+
+/* TIP
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.tip {
+  position: absolute;
+  margin-left: 175px;
+  padding: 10px;
+  width: 150px;
+  border-radius:20px;
+  font-size:14px;
+  color:#456990;
+  background-color:white;
+  opacity:0;
+}
+
+.timeline ul li:hover {
+  animation-name: color;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes color {
+  from {background-color: white;}
+  to {background-color: #FF1654;}
+}
 
 /* INTRO SECTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .intro {
-  background: teal;
-  padding: 100px 0;
+  background: #70C1B3;
+  padding: 80px 0;
 }
 
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
 }
@@ -33,7 +66,7 @@ h1 {
 }
 
 
-/* TIMELINE
+/* Timeline
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline ul li {
@@ -42,11 +75,11 @@ h1 {
   width: 6px;
   margin: 0 auto;
   padding-top: 50px;
-  background: white;
+  background: #F3FFBD;
 }
 
 
-/* CIRCLE
+/* Circles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline ul li::after {
@@ -70,20 +103,102 @@ h1 {
   bottom: 0;
   width: 400px;
   padding: 15px;
-  background: teal;
+  background: #70C1B3;
 }
 
 
-/* Triangles
-––––––––––––––––––––––––––––––––––––––––––––––––––
-.timeline ul li div::before {
-  content: '';
+/* Birth Tip 1994
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#birthTip {
   position: absolute;
-  bottom: 7px;
-  width: 0;
-  height: 0;
-  border-style: solid;
+  margin-left: -290px;
+  top: 50px;
+  padding: 15px;
+  width: 210px;
+  border-radius:10px;
+  font-size:14px;
+  color:#456990;
+  background-color:white;
+  opacity:0;
+}
+/*  animation: move 3s;
+}
+
+@keyframes move {
+  from: {left: 0px;}
+  to: {left: 70px;}
 } */
+
+/* Baby Tip 1999
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#babyTip {
+  position: absolute;
+  margin-left: 490px;
+  margin-top: 10px;
+  top: 90px;
+  padding: 15px;
+  width: 160px;
+  border-radius:10px;
+  font-size:14px;
+  color:#456990;
+  background-color:white;
+  opacity:0;
+}
+
+
+/* Purchase Tip 2008
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#purchaseTip {
+  position: absolute;
+  margin-left: -290px;
+  margin-top: 10px;
+  top: 120px;
+  padding: 15px;
+  width: 210px;
+  border-radius:10px;
+  font-size:14px;
+  color:#456990;
+  background-color:white;
+  opacity:0;
+}
+
+/* Spikes Tip 2009
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#spikesTip {
+  position: absolute;
+  margin-left: 490px;
+  margin-top: 10px;
+  top: 110px;
+  padding: 15px;
+  width: 140px;
+  border-radius:10px;
+  font-size:14px;
+  color:#456990;
+  background-color:white;
+  opacity:0;
+}
+
+
+/* Thous Tip 2015
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#thousTip {
+  position: absolute;
+  margin-left: -230px;
+  margin-top: 10px;
+  top: 135px;
+  padding: 15px;
+  width: 140px;
+  border-radius:10px;
+  font-size:14px;
+  color:#456990;
+  background-color:white;
+  opacity:0;
+}
 
 
 /* ODD = Right side
@@ -91,11 +206,9 @@ h1 {
 
 .timeline ul li:nth-child(odd) div {
   left: 45px;
+  top: 10px;
 }
 
-
-/* EVEN = Left side
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
@@ -103,19 +216,34 @@ h1 {
   border-color: transparent teal transparent transparent;
 }
 
+/* EVEN = Left side
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .timeline ul li:nth-child(even) div {
   left: -439px;
+  top: 10px;
 }
 
 .timeline ul li:nth-child(even) div::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent teal;
+  border-color: transparent transparent transparent #70C1B3;
+}
+
+
+/* Countdown
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.countdown {
+  background: #70C1B3;
+  padding: 40px 0;
+  margin-top: 50px;
+  text-align: center;
 }
 
 
 /* FOOTER
----- */
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
 
 footer {
   position: relative;
@@ -138,5 +266,5 @@ a:link, a:visited {
 }
 
 a:hover {
-  color: teal;
+  color: #70C1B3;
 }
