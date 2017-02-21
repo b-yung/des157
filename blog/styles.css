@@ -15,19 +15,20 @@ body {
 }
 
 a:link {
-	color:#CACFD2;
+	color:#7ae7c7; //mint
 	text-decoration: none;
 }
 a:visited {
-	color:#CACFD2;
-	text-decoration: underline;
+	color:#7ae7c7;
+  text-decoration: none;
 }
 a:hover {
-	color: #7ae7c7;
+	color: #CACFD2; //mint
+  text-decoration: underline;
 }
 a:active{
 	color: #7ae7c7;
-	text-decoration: underline;
+  text-decoration: none;
 }
 
 #BlogHeader h1 {
