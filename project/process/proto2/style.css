@@ -102,8 +102,8 @@ p {
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     padding: 10px;
     position: absolute;
-    bottom: 60;
-    right: 20;
+    bottom: 60px;
+    right: 20px;
 /*    left: 93%;
     top: 67%; */
     z-index: 1;
