@@ -50,6 +50,8 @@ p {
     background-color: #ededed;
     padding: 5px 0;
     color: #dedede;
+    height: 18vh;
+    max-height: 118px;
 }
 
 .container {
@@ -67,6 +69,7 @@ p {
     width: 100%;
     height: 100%;
     background: white;
+    height: 82vh;
 }
 
 
