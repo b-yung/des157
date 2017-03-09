@@ -12,13 +12,13 @@ h1 {
     text-align: center;
     position: relative;
     top: 20px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Avenir', sans-serif;
     font-size: 36px;
 }
 
 #description {
     color: black;
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     position: relative;
     margin-top: 20px;
     text-align: center;
