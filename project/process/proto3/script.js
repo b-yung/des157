@@ -48,24 +48,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
 */
 
-        // Add the info window
-        // Hover state that shows population density information for state.
-        // If the cursor is not hovering over a state, the info window should say, "Hover over a state!"
-        // Add a listener for mousemove event, identify which state is at the location of the cursor if any, and update the info window.
-        map.on('mousemove', function(e) {
-            var states = map.queryRenderedFeatures(e.point, {
-                layers: layers
-            });
 
-            if (states.length > 0) {
-                document.getElementById('pd').innerHTML = '<h3><strong>' + states[0].properties.name + '</strong></h3><p><strong><em>$' + states[0].properties.salary + 'k</strong> on average</em></p>';
-            } else {
-                document.getElementById('pd').innerHTML = '<p>Hover over a state!</p>';
-            }
-        });
 
         // Add the Menu to toggle layers
         var toggleableLayerIds = ['29-38', '38-47', '47-56', '56-65', '65-74'];
+
 
         for (var i = 0; i < toggleableLayerIds.length; i++) {
             var id = toggleableLayerIds[i];
@@ -95,6 +82,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
             layers.appendChild(link);
         }
 
+        // Add the info window
+        // Hover state that shows population density information for state.
+        // If the cursor is not hovering over a state, the info window should say, "Hover over a state!"
+        // Add a listener for mousemove event, identify which state is at the location of the cursor if any, and update the info window.
+        map.on('mousemove', function(e) {
+            var states = map.queryRenderedFeatures(e.point, {
+                layers: layers
+            });
+
+            if (states.length > 0) {
+                document.getElementById('pd').innerHTML = '<h3><strong>' + states[0].properties.name + '</strong></h3><p><strong><em>$' + states[0].properties.salary + 'k</strong> on average</em></p>';
+            } else {
+                document.getElementById('pd').innerHTML = '<p>Hover over a state!</p>';
+            }
+        });
+        
         // Add a source displaying a point which will be animated in a circle.
         map.addSource('point', {
             "type": "geojson",
