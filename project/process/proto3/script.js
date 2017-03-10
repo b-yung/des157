@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed")
 
-    // Access Token for Population Density
+    // Access Token for GD-Salary
     mapboxgl.accessToken =
         'pk.eyJ1IjoiYnl1bmciLCJhIjoiY2l6OHplcHhiMDF5eTMycW9iZGV2dnVmdiJ9.zjEkLqI0pMFXxzFKo_0AEg';
 
@@ -16,19 +16,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     var map = new mapboxgl.Map({
         container: 'map',
-        // style: 'mapbox://styles/mapbox/dark-v9', //Default dark-v9
-        style: 'mapbox://styles/byung/cj023dnb6000s2smjn9lvtq5c', //Population Density Style
+        style: 'mapbox://styles/byung/cj030pl5c00252sntkcqcr2rz', //GD-Salary Style
         center: [-121.934509, 38.000491],
         zoom: 5,
     });
 
     map.on('load', function() {
-map.fitBounds([[-133.2421875, 16.972741], [-47.63671875, 52.696361]]);
+        map.fitBounds([
+            [-133.2421875, 16.972741],
+            [-47.63671875, 52.696361]
+        ]);
 
         // Add variable for each layer
-        var layers = ['0-10', '10-20', '20-50', '50-100', '100-200', '200-500', '500-1000', '1000+'];
+        var layers = ['29-38', '38-47', '47-56', '56-65', '65-74'];
 
-      /*
+        /*
         // Add a legend that iterates through the list of layers defined above.
         // Add a legend element based on the NAME of the layer + its COLOR.
         layers.forEach(function(layer) {
@@ -56,7 +58,7 @@ map.fitBounds([[-133.2421875, 16.972741], [-47.63671875, 52.696361]]);
             });
 
             if (states.length > 0) {
-                document.getElementById('pd').innerHTML = '<h3><strong>' + states[0].properties.name + '</strong></h3><p><strong><em>' + states[0].properties.density + '</strong> people per square mile</em></p>';
+                document.getElementById('pd').innerHTML = '<h3><strong>' + states[0].properties.name + '</strong></h3><p><strong><em>$' + states[0].properties.salary + 'k</strong> on average</em></p>';
             } else {
                 document.getElementById('pd').innerHTML = '<p>Hover over a state!</p>';
             }
@@ -119,7 +121,7 @@ map.fitBounds([[-133.2421875, 16.972741], [-47.63671875, 52.696361]]);
 
 
         }
-          // Start the animation.
+        // Start the animation.
         animateMarker(0);
 
     });
