@@ -70,10 +70,15 @@ h3 {
   margin-top: 50px;
 }
 
-#column-one, #column-two, #column-three {
+#column-one, #column-two, #column-three, #column-four {
     float: left;
-    width: 33%;
-    text-align: center;
+    width: 24%;
+    text-align: left;
+    margin-left: 5px;
+}
+
+#column-four {
+  margin-top: 34px;
 }
 
 #entries {
