@@ -4,18 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <title>State Graphic Design Salaries</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <link rel="stylesheet" href="style.css">
-
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
-    <script src="script.js"></script>
-
+    <!-- External CSS -->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- Mapbox CSS -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
+    <!-- Mapbox JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <!-- Leaflet CSS -->
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <!-- Leaflet JS -->
+    <script src="script.js"></script>
+    <!-- External JS -->
 
 </head>
 
+
+<!--
+<script>
+    /* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+  </script>
+-->
+
 <body>
     <main>
+        <!-- SIDE NAVIGATION
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+-->
+        <!-- <div class="right-arrow" onclick="openNav()">Open</div> -->
+
         <section class="intro">
             <div class="container">
                 <h1>theWAGER</h1>
@@ -23,18 +54,29 @@
             </div>
         </section>
 
-        <nav id="menu"></nav>
+        <!-- Navigation Side Menu for Toggling Layers -->
+        <nav id="jobMenu"></nav>
+        <nav id="salaryMenu"></nav>
 
+      <!--<div id='stylemenu'>
+      <input id='animator' type='radio' name='rtoggle' value='animator'>
+      <label for='animator'>Animator</label><br>
+      <input id='gd-salary' type='radio' name='rtoggle' value='gd-salary'>
+      <label for='gd-salary'>Graphic Designer</label><br>
+</div>
+-->
         <div id='map'>
         </div>
 
+        <!-- Info Window on Top Right -->
         <div class='map-overlay' id='features'>
-            <h2>US Graphic Designer Salaries</h2>
+            <h2>US Yearly Salaries</h2>
             <div id='pd'>
                 <p id="info">Hover over a state!</p>
             </div>
         </div>
 
+        <!-- Legend for Salaries -->
         <div id='density-legend' class='legend'>
             <h4>Salaries</h4>
             <div><span style='background-color: #97E4B9'></span>29-38k</div>
@@ -42,7 +84,10 @@
             <div><span style='background-color: #43BD8A'></span>47-56k</div>
             <div><span style='background-color: #128D7C'></span>56-65k</div>
             <div><span style='background-color: #077363'></span>65-74k</div>
+            <div><span style='background-color: rgb(0,25,61)'></span>74-83k</div>
         </div>
+
+
 
     </main>
 
