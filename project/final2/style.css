@@ -73,7 +73,9 @@ p {
 ––––––––––––––––––––––––––––––––––––––––––––––––––  */
 
 .mapboxgl-popup {
+    background-color: white;
     max-width: 400px;
+    padding: 50px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
@@ -139,11 +141,9 @@ p {
     background-color: #115644; /* Dark Teal */
 }
 
+
 /* Button Color */
 #salaryMenu {
-    text-align: center;
-    color: white;
-    font-size: 12px;
     background: #636363;
     position: absolute;
     z-index: 1;
@@ -158,7 +158,7 @@ p {
 /* Link Color */
 #salaryMenu a {
     font-size: 13px;
-    color: white; /* 404040 original */
+    color: white; /* #404040 original */
     display: block;
     margin: 0;
     padding: 0;
@@ -185,52 +185,6 @@ p {
     background: #3074a4;
 }
 
-/* ---- ANIMATOR ---- */
-/* Button Color */
-#animatorsalaryMenu {
-    text-align: center;
-    color: white;
-    font-size: 12px;
-    background: #636363;
-    position: absolute;
-    z-index: 1;
-    top: 425px;
-    left: 20px;
-    border-radius: 3px;
-    width: 120px;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    font-family: 'Open Sans', sans-serif;
-}
-
-/* Link Color */
-#animatorsalaryMenu a {
-    font-size: 13px;
-    color: white; /* 404040 original */
-    display: block;
-    margin: 0;
-    padding: 0;
-    padding: 10px;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    text-align: center;
-}
-
-/* Link Hover */
-#animatorsalaryMenu a:hover {
-    background-color: #f8f8f8;
-    color: #404040;
-}
-
-/* Link Active State */
-#animatorsalaryMenu a.active {
-    background-color: #3887be; // 3887be = blue
-    color: #ffffff;
-}
-
-/* Link Hover Active State */
-#animatorsalaryMenu a.active:hover {
-    background: #3074a4;
-}
 
 /* LEGEND
 ––––––––––––––––––––––––––––––––––––––––––––––––––  */

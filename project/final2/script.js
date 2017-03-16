@@ -26,8 +26,8 @@ map.on('load', function() {
 
 /* LAYER VARIABLES
 -------------------------------------- */
-    var layers = ['Gr. $29k-$38k', 'Gr. $38k-$47k', 'Gr. $47k-$56k', 'Gr. $56k-$65k', 'Gr. $65k-$74k'];
-    var layerz = ['An. $38k-$47k', 'An. $47k-$56k', 'An. $56k-$65k', 'An. $65k-$74k', 'An. $74k-$83k'];
+    var layers = ['29-38', '38-47', '47-56', '56-65', '65-74'];
+    var layerz = ['a38-47', 'a47-56', 'a56-65', 'a65-74', 'a74-83'];
 
 
 /* HOVER INFO WINDOW
@@ -35,9 +35,9 @@ map.on('load', function() {
     // Hover state that shows population density information for state.
     // If the cursor is not hovering over a state, the info window should say, "Hover over a state!"
     // Add a listener for mousemove event, identify which state is at the location of the cursor if any, and update the info window.
-    /*map.on('mousemove', function(e) {
+    map.on('mousemove', function(e) {
         var states = map.queryRenderedFeatures(e.point, {
-            layers: layers
+            layers: layers, layerz: layerz,
         });
 
         if (states.length > 0) {
@@ -49,23 +49,7 @@ map.on('load', function() {
         } else {
             document.getElementById('pd').innerHTML = '<p>Hover over a state!</p>';
         }
-    });*/
-    map.on('mousemove', function(e) {
-        var statez = map.queryRenderedFeatures(e.point, {
-            layers: layers
-        });
-
-        if (statez.length > 0) {
-            document.getElementById('pd').innerHTML = '<h3><strong>' + statez[0].properties.name +
-            '</strong></h3><p><strong><em><span style="color:green">$' +
-            statez[0].properties.gdsalary +
-            'k</span></strong> on avg. for graphic design</em></p><p><strong><em><span style="color:#3074a4">$' + statez[0].properties.salary +
-            'k</span></strong> on avg. for animation</em></p>';
-        } else {
-            document.getElementById('pd').innerHTML = '<p>Hover over a state!</p>';
-        }
     });
-
 
 /* POPUP WINDOW
 -------------------------------------- */
@@ -73,6 +57,7 @@ map.on('load', function() {
     // the feature, with description HTML from its properties.
     map.on('click', function(e) {
       var states = map.queryRenderedFeatures(e.point, {
+          layerz: layerz,
           layers: layers
       });
 
@@ -85,6 +70,7 @@ map.on('load', function() {
     // Change cursor style to pointer
     map.on('mousemove', function(e) {
         var features = map.queryRenderedFeatures(e.point, {
+            layerz: layerz,
             layers: layers
         });
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
@@ -92,8 +78,8 @@ map.on('load', function() {
 
 /* MENU TO TOGGLE LAYER GROUPS [JOB MENU]
 -------------------------------------- */
-toggleLayer(['Gr. $29k-$38k', 'Gr. $38k-$47k', 'Gr. $47k-$56k', 'Gr. $56k-$65k', 'Gr. $65k-$74k'], 'Graphic Design');
-toggleLayer(['An. $38k-$47k', 'An. $47k-$56k', 'An. $56k-$65k', 'An. $65k-$74k', 'An. $74k-$83k'], 'Animation');
+toggleLayer(['29-38', '38-47', '47-56', '56-65', '65-74'], 'Graphic Design');
+toggleLayer(['a38-47', 'a47-56', 'a56-65', 'a65-74', 'a74-83'], 'Animation');
 
 function toggleLayer(ids, name) {
     var link = document.createElement('a');
@@ -123,9 +109,10 @@ function toggleLayer(ids, name) {
 }
 
 
-/* MENU TO TOGGLE GRAPHIC SALARIES
+/* MENU TO TOGGLE LAYERS [SALARY MENU]
 -------------------------------------- */
-var toggleableLayerIds = ['Gr. $29k-$38k', 'Gr. $38k-$47k', 'Gr. $47k-$56k', 'Gr. $56k-$65k', 'Gr. $65k-$74k'];
+var toggleableLayerIds = ['29-38', '38-47', '47-56', '56-65', '65-74', 'a38-47', 'a47-56', 'a56-65', 'a65-74', 'a74-83'];
+
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
@@ -155,39 +142,6 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
     layerz.appendChild(link);
 }
 
-/* MENU TO TOGGLE ANIMATOR SALARIES
--------------------------------------- */
-
-var toggleableLayerIdz = ['An. $38k-$47k', 'An. $47k-$56k', 'An. $56k-$65k', 'An. $65k-$74k', 'An. $74k-$83k'];
-
-for (var i = 0; i < toggleableLayerIdz.length; i++) {
-    var id = toggleableLayerIdz[i];
-
-    var link = document.createElement('a');
-    link.href = '#';
-    link.className = 'active';
-    link.textContent = id;
-
-    link.onclick = function(e) {
-        var clickedLayer = this.textContent;
-        e.preventDefault();
-        e.stopPropagation();
-
-        var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
-
-        if (visibility === 'visible') {
-            map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-            this.className = '';
-        } else {
-            this.className = 'active';
-            map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
-        }
-    };
-
-    var layerzz = document.getElementById('animatorsalaryMenu');
-    layerzz.appendChild(link);
-}
-
 /* BORDERS
 -------------------------------------- */
 function style(feature) {
@@ -197,21 +151,21 @@ function style(feature) {
         color: 'white',
         dashArray: '3',
         fillOpacity: 0.7,
-        fillColor: getColor(states[0].properties.name)
+        fillColor: getColor(feature.properties.density)
     };
 }
 
 function highlightFeature(e) {
-    var layers = e.target;
+    var layerss = e.target;
 
-    layers.setStyle({
+    layerss.setStyle({
         weight: 5,
         color: '#666',
         dashArray: '',
         fillOpacity: 0.7
     });
 
-    info.update(states[0].properties.name);
+    info.update(layerss.feature.properties);
 }
 
 var geojson;
@@ -221,14 +175,14 @@ function resetHighlight(e) {
     info.update();
 }
 
-function onEachFeature(feature, layers) {
-    layers.on({
+function onEachFeature(feature, layerss) {
+    layerss.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight,
     });
 }
 
-geojson = L.geoJson(layers, {
+geojson = L.geoJson(layers, layerz, {
     style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
